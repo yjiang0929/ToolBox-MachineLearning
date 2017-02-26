@@ -1,0 +1,11 @@
+1.What is the general trend in the curve?
+The accuracy of test sets increases as the percentage of data used for training increases.
+
+2.Are there parts of the curve that appear to be noisier than others? Why?
+The middle parts of the curve(when training percentage is around 50) appear to be noisier than others. Because when training percentage is extremely high or low, the accuracy of tests will be high or low no matter what part of the training data they capture. But when the training percentage is somewhere in the middle, it is likely that the training data will be a representative subset of the entire data or only a charactistic portion of it. The uncertainty in the credibility of the chosen training data caused the accuracy curve to be noiser.
+
+3.How many trials do you need to get a smooth curve?
+When the number of trials is above 200, the curve is usually smooth.
+
+4.Try different values for C (by changing LogisticRegression(C=10** -10)). What happens?
+when I changed the values for C to be smaller/bigger, the resulting curve turns out to be exponential decay/increase. This showed that the current C(10^-10) works the best to approach the accuracy curve to a linear pattern.
